@@ -11,6 +11,6 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "netlify-plugin-quarto": "^1.0.0"
+    "@quarto/netlify-plugin-quarto": "^0.0.5"
   }
 }
