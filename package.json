@@ -12,5 +12,8 @@
   "type": "commonjs",
   "dependencies": {
     "@quarto/netlify-plugin-quarto": "^0.0.5"
+  },
+  "devDependencies": {
+    "netlify-plugin-quarto": "^0.0.4"
   }
 }
