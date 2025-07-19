@@ -3,7 +3,7 @@ title: "Background & History Form"
 subtitle: "Pediatric Neuropsychology"
 ---
 
-<form id="nse-form">
+<form id="nse-form" netlify>
   <label>
     Child’s Name:<br>
     <input type="text" name="child_name" required>
