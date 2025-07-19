@@ -6,3 +6,6 @@ format:
   html:
     css: styles.css # optional styling
     self-contained: true
+
+execute:
+  freeze: auto
