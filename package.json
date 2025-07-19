@@ -9,8 +9,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "@quarto/netlify-plugin-quarto": "^0.0.5"
-  }
+  "type": "commonjs"
 }
