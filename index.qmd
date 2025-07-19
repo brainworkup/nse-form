@@ -1,0 +1,46 @@
+---
+title: "Background & History Form"
+---
+
+<form id="nse-form">
+  <label>
+    Child’s Name:<br>
+    <input type="text" name="child_name" required>
+  </label><br><br>
+
+  <label>
+    Date of Birth:<br>
+    <input type="date" name="dob" required>
+  </label><br><br>
+
+  <label>
+    Medical History:<br>
+    <textarea name="medical_history" rows="4"></textarea>
+  </label><br><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div id="status"></div>
+
+<script>
+document.getElementById("nse-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form));
+
+  // send to our Netlify Function
+  const resp = await fetch("/.netlify/functions/submitForm", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  if (resp.ok) {
+    document.getElementById("status").innerText = "✅ Thank you—your data has been submitted.";
+    form.reset();
+  } else {
+    document.getElementById("status").innerText = "❌ Submission failed. Please try again.";
+  }
+});
+</script>
